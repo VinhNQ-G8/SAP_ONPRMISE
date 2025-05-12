@@ -1,9 +1,13 @@
-@EndUserText.label : 'Material List Structure'
+*&---------------------------------------------------------------------*
+*& Structure: ZST_MATERIAL_LIST
+*& Description: Structure for Material List ALV Display
+*&---------------------------------------------------------------------*
+@EndUserText.label : 'Structure for Material List ALV'
 @AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
 @AbapCatalog.tableCategory : #STRUCTURE
 @AbapCatalog.deliveryClass : #A
 @AbapCatalog.dataMaintenance : #RESTRICTED
-define type ZST_MATERIAL_LIST {
+define structure ZST_MATERIAL_LIST {
   @EndUserText.label : 'Material Number'
   matnr : matnr;
   
