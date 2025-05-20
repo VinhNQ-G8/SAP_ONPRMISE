@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZPG_BOM_MATERIAL_EXTRACT</NAME>
+    <DBAPL>S</DBAPL>
+    <SUBC>1</SUBC>
+    <FIXPT>X</FIXPT>
+    <LDBNAME>D$S</LDBNAME>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Trích xuất dữ liệu BOM và Material Master</ENTRY>
+     <LENGTH>39</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_MATNR</KEY>
+     <ENTRY>Material Number</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_WERKS</KEY>
+     <ENTRY>Plant</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Selection Parameters</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>V</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Trích xuất dữ liệu BOM và Material Master</ENTRY>
+       <LENGTH>39</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_MATNR</KEY>
+       <ENTRY>Mã vật tư</ENTRY>
+       <LENGTH>14</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_WERKS</KEY>
+       <ENTRY>Mã nhà máy</ENTRY>
+       <LENGTH>5</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Thông số lựa chọn</ENTRY>
+       <LENGTH>19</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_BOM_MASTER</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu BOM Master</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_CUSTOMER_MASTER</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Customer Master</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_CUSTOMER_MATERIAL</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Customer Material</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_MATERIAL_MASTER</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Material Master</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_MATERIAL_PLANT</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Material Plant</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_MATERIAL_PLANT_EXTEND</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Material Plant Extended</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_PRODUCTION_VERSION</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Production Version</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_PURCHASING_INFO</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Purchasing Info</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_PURCHASING_PRICE</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Purchasing Price</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ROUTING_MASTER</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Routing Master</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SALES_PRICE</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Sales Price</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SOURCE_SUPPLY</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Source Supply</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_VENDOR_MASTER</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Vendor Master</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_WORK_CENTER</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Lấy dữ liệu Work Center</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAIN</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Xử lý chính</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALIDATE_INPUT</CMPNAME>
+     <LANGU>V</LANGU>
+     <DESCRIPT>Kiểm tra dữ liệu đầu vào</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DOCUMENTATION>
+    <RSFDO>
+     <OBJECT>ZPG_BOM_MATERIAL_EXTRACT</OBJECT>
+     <LANGU>V</LANGU>
+     <TYP>1</TYP>
+     <DESCRIPT>Trích xuất dữ liệu BOM và Material Master</DESCRIPT>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Chương trình trích xuất dữ liệu từ SAP theo quy trình BOM và Material Master</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Các bước xử lý:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>1. Material Plant</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>2. BOM Master</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>3. Material Master</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>4. Material Plant Extended</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>5. Sales Price</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>6. Customer Master</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>7. Customer Material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>8. Purchasing Price</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>9. Purchasing Info</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>10. Source Supply</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>11. Vendor Master</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>12. Production Version</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>13. Routing Master</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>14. Work Center</TDLINE>
+      </TLINE>
+     </LINES>
+    </RSFDO>
+   </DOCUMENTATION>
+  </asx:values>
+ </asx:abap>
+</abapGit> 
